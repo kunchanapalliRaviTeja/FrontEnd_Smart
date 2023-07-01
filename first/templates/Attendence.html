@@ -1,0 +1,7 @@
+{% extends 'tempo.html' %}
+{% block content %}
+<form action="/TakeAttend/" method="post">
+    {% csrf_token %}
+    <input type="submit">
+</form>
+{% endblock %}

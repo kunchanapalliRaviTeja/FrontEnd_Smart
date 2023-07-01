@@ -1,0 +1,31 @@
+{% extends 'tempo.html' %}
+{% block content %}
+<head>
+    <style>
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+          }
+    </style>
+</head>
+<h1><center>Student Data</center></h1>
+<hr/>
+<table border="1"  class="center">
+    <tr>
+        <th>Name</th>
+        <th>RegdNO</th>
+        <th>MailId</th>
+        <th>sem</th>
+        <th>City</th>
+    </tr>
+    {% for getdata in StudentDetails%}
+    <tr>
+        <td>{{getdata.name}}</td>
+        <td>{{getdata.rollno}}</td>
+        <td>{{getdata.mailid}}</td>
+        <td>{{getdata.sem}}</td>
+        <td>{{getdata.city}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
